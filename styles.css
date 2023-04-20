@@ -10,7 +10,10 @@ body{
 
 #movieContainer{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 header{
@@ -50,12 +53,31 @@ header input::placeholder{
 .movie{
     width: 300px;
     background-color: #373b69;
-    margin: 2rem;
+    margin: 1.3rem;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     overflow: hidden;
     position: relative;
 }
+
+@media screen and (max-width: 1280px) {
+   .movie{
+    width: 200px;
+    /* height: 270px; */
+   }
+  }
+
+@media screen and (max-width: 1080px) {
+   .movie{
+    width: 170px;
+    /* height: 270px; */
+   }
+
+   .movie img {
+    height: 170px;
+    object-fit: cover;
+}
+  }
 
 .movie:hover{
     transition: all 0.3s ease;

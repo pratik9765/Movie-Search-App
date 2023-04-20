@@ -29,6 +29,7 @@ header input{
     padding: 0.5rem 1rem;
     color: #fff;
     border: 2px solid #22254b;
+    font-size: 1rem
 }
 
 header input::placeholder{
@@ -37,7 +38,6 @@ header input::placeholder{
 
 .search{
     background-color: transparent;
-    /* border: 2px solid #22254b; */
     border-radius: 50px;
     color: #fff;
     font-size: 1rem;
@@ -48,6 +48,8 @@ header input::placeholder{
     outline: none;
     background-color: #22254b;
 }
+
+
 
 
 .movie{
@@ -65,7 +67,15 @@ header input::placeholder{
     width: 200px;
     /* height: 270px; */
    }
+
+   .overview{
+    padding: 0;
+    margin: -30px;
+    font-size: 15px;
+   }
   }
+
+
 
 @media screen and (max-width: 1080px) {
    .movie{
@@ -75,9 +85,54 @@ header input::placeholder{
 
    .movie img {
     height: 170px;
-    object-fit: cover;
+    object-fit:fill;
+    /* transform: scale(125%); */
 }
+
+.overview{
+    font-size: 12px;
+   }
+
   }
+
+
+  @media screen and (max-width: 425px) {
+    .movie{
+     width: 130px;
+    }
+ 
+    .movie img {
+     height: 140px;
+     object-fit:fill;
+ }
+ 
+ .overview{
+     font-size: 10px;
+    }
+
+    .movie-info{
+        padding: 0.5rem 0rem 0.5rem;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .movie-info span{
+        font-size: 12px;
+    }
+
+    .movie-info title{
+        font-size: 5px;
+    }
+ 
+   }
+
+   @media screen and (max-width: 600px){
+
+    input{
+        width: 170px;
+    }
+
+   }
 
 .movie:hover{
     transition: all 0.3s ease;
@@ -135,14 +190,12 @@ header input::placeholder{
     padding: 2.5rem;
     transform: translateY(100%);
     transition: all 0.3s ease-in;
-
 }
 
 .overview h4{
     font-weight: 700;
     font-size: 18px;
     padding-bottom: 1rem;
-
 }
 
 
